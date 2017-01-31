@@ -1,0 +1,73 @@
+#Qu'est ce que de la modélisation mathématique:
+
+Il s'agit de "mathématiser" un phénoméne, une observation, une prédiction du monde réel.
+La modélisation prend plusieurs formes, mais est souvent/toujours "incorect", il n'est pas possible de prédire/modéliser quelque du monde vivant, il est nécéssaire de faire des abstraction et des aproximations.
+ 
+#Introduction: Qu'est ce que la dynamique des populations
+
+La dynamique des populations s’intéresse au développement numérique de toutes les populations d’êtres vivants, et plus particulièrement de celles des animaux sexués.
+Ces études ont pour but, outre de prévoir les accroissements ou diminutions des populations, de comprendre les influences environnementales sur les effectifs des populations(wikipedia)
+
+#Pourquoi faire ? 
+
+La dynamique des populations a une grande importance dans beaucoup de domaines: pour contrôler la pêche, gérer les zones qui sont protéger, certain des découvertes qui ont été faite dans ce domaine sont aussi appliquer au domaine des finances pour faire des estimations sur la survie d'une entreprises dans un environnemnent compétitif. 
+
+#Quand ? 
+
+Malgré une grande utilité, les modéles ne sont apparue relativement tard puisque la plupart des applications des modéles ne sont utile que dans un monde dévelloper; de plus les outils pour suivre l'évolution d'une population n'étaient pas les même qu'aujourd'hui. 
+
+##Malthus:
+Le premier modéle apparaît en 1202 oeuvre de Leonardo Fibonacci cependant c'est en 1798 que Malthus pose les fondements de la dynamique des populations.
+Il tentera de prover que une population qui est dans une situation avantageuse pour croitre va alors inévitablement croitre sur la totalité du territoire qu'elle peut occuper jusqu'à la Catastrophe Malthusienne (famine et maladie).
+ Il définie à l'époque la "population idéale" qui est alors constituer d'une seule espéce animale homogène, il négligera cependant les variations d'âge,taille. 
+Son modéle reposant un taux de croissance conduit a une croissance expnentielle, prouvé sur de faible population et sur la croissance de la population mondial sur les siécles précédents. 
+
+Le succéseurs de Malthus seras Verhulst qui lui prendra en compte les repproches émisse à l'encontre du père de la dynamique des population. 
+En 1838 Verhulst propose donc un modèle qui prend en compte la limitation qui est imposé par l'effectif croissant de la population en effet une population qui a du mal a se nourir auras tendance a moins se reproduire, il introduit donc la notion qu'un milieux a une limite d'individus. 
+
+
+C'est dans le seconde moitié du XXème siécle que les plus grandes avancées sont faite est alors introduit le premiers modéle proie-prédateur. C'est en analysant les résultat de pêche des principaux ports Italien que Volterra élabore le modéle connue sous le nom de modéle Proie-Prédateur.
+Le modéle repose sur celui de Malthus en incorporant la notion de prédation, la logique est simple lorsqu'il y a peu de prédateurs la population de prois va augmenter, l'inverse est vrai aussi puisque la proie étant la source de nourriture des prédateurs lorsqu'il y a beaucoup de nourriture ceux ci vont plus se reproduire; une population dépend donc de l'autre. Ce modéle prouveras l'impact de la pêche sur l'augmentation de proie lorsque ses prédateurs sont pêché. 
+
+Par la suite les modéle ont été ammené a s'améliorer et a être prouver, nottament par Holling qui considére qu'un prédateur répartit son temps en 2, une partie pour la chasse (trouver, manger, digérer), moins il y a de prois plus le temps consacrer a cette activité est grand, mais lorsque le nombre de proie augmente il y a un stade où le prédateur ne mangera plus, la saïeté le temps de chasse devient donc constant.
+
+#Les modéles en détails: 
+
+##Malthusien:
+
+Le plus simple, R est un facteur constant de proportionnalité qui représente le taux de croissance d'une population, tandis que N(t) est le nombre d'individus à l'instant t. Ce modéle a été prouvé non réaliste lorsqu'on étudie de grandes populations
+
+
+Le modéle qui est présenter par Malthus prévois une croissance exponentielle d e la population cela devrait conduire a une période de famine, guerre et d'épidémie.
+Darwin appliqua ce modéle sur un couple d'éléphant qui couvrirait alors la Terre en seulement quelque siécle. 
+Cependant le modéle a tout de même du vrai puisqu'il seras perfectionner par la suite, c'est le manque de prise en compte des éléments du milieux qui font que ce modéle ne peut être appliquer a de réel cas.
+
+
+##Verhulst: 
+Il pris la suite de Malthus et corriga son modéle en prenant en compte le frottement. 
+Le frottement désigne le fait que lorsqu'une population augmente arrive un stade où la population ne peut se nourir abonndament elle auras tendance moins se reproduire 
+
+#Le Proies-Prédateurs 
+x(t) est l'éffectif des proies en fonction du temps
+y(t) est l'effectif des prédateurs en fonction du temps
+Les dérivées représente la variation des populations au cours du temps
+'a' est le taux de reproduction des proies (indépendant des prédateurs)
+'b' est le taux de mortalité des proies dû aux prédateurs
+'c' est le taux de mortalité constant des proies (indépendant du nombre de proies)
+'d' est le taux de reproduction en fonction des proies rencontrées et mangées
+
+La croissance des populations sont liées, plus il y a de prédateurs moins il y a de ressources pour la croissance des prédateurs la population va donc baisser et celle des proies va ensuite augmenter.
+Il y a donc un cycle entre les 2 populations, cependant il y a tout de même un équilibre naturel qui peut être trouver ce point seras dévelloper plus tard.
+
+
+Les solutions pour utiliser les modéles: 
+
+Les modéleles sont des équations différentielles:
+une équation différentielle est une relation entre une ou plusieurs fonctions inconnues et leurs dérivées (wikipedia). Certainne équations des solutions mais ce n'est pas le cas pour Lockta-Volterra, on cherche donc une approximation, plusieurs techniques permette de le faire.
+
+#Euler
+C'est la méthode la plus simple pour résoudre les équations qui n'ont pas de solutions, le principe est plutôt simple.
+
+La premiére étape est d'établir les conditions initiales, ensuite il faut prendre un pas.
+La seconde étape est de calculer la dérivé de la fonction avec les conditions initiale on trouve alors une aproximation de l'évolution, en avance alors du pas avec cette aproximation.
+Il suffit alors de répéter cette méthode plusieurs fois.

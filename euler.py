@@ -3,11 +3,12 @@ import os
 
 def makeGraph(files):
     #This make a graph with the data wrote in the files using gnuplot
-    command = "gnuplot -p -e \"set title \\\"salut\\\"; plot"
+    command = "gnuplot -p -e \"set title \\\" \\\"; set terminal svg; set output \\\"output.svg\\\"; plot"
     for f in files:
         command = command + ' \\\".graph'+str(files.index(f))+".txt\\\","
     command = command[:len(command)-1] + "\""
     os.system(command)
+
 def euler (step, ite, expressionList, initialValuesDict):
 
     # this will open all the files
@@ -90,7 +91,7 @@ def dynamic(a,b,c,d,x,y):
     b = "-y*("+str(c)+"-"+str(d)+"*x)",'y'
     expressionList = [a,b]
     initialValuesDict = {'x':x, 'y':y}
-    rk(0.1, 4000, expressionList, initialValuesDict))
+    makeGraph(rk(0.1, 4000, expressionList, initialValuesDict))
 
 # step = 0.1
 # ite = 4000
