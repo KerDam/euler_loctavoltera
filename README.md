@@ -1,5 +1,5 @@
 #Euler_LoctaVoltera
-![alt text](img/output.png"Description goes here")
+![alt text](img/output.png "Description goes here")
 
 School project, the objective is to find a solution to a math problem in our case: "how to represent the locta voltera equation".
 
